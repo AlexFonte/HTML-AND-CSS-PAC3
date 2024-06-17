@@ -1,0 +1,337 @@
+:root {
+    --main-color: #D11067;
+    --dark-color: #7A1628;
+    --yellow: #FFF616;
+    --text-color-field: #FFFFFF33;
+    --text-color: #172655;
+    --bg-light-yellow: #FEFBF4;
+    --bg-dark-gray: #333333;
+    --bg-light-green: #DEF5F0;
+    --bg-light-blue: #E3EDFD;
+    --bg-light-orange: #F7E9E7;
+    --border-color: #EDEDED;
+    --primary-font: "Montserrat", sans-serif;
+    --second-font: "Satisfy", cursive;
+    --white: #FFFFFF;
+}
+
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat-semibold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-weight: 400;
+    color: var(--primary-color);
+    line-height: 1.5;
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+}
+
+header .fucsia {
+    background: var(--main-color);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--text-color);
+
+}
+
+main {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+footer {
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner li {
+    list-style: none;
+    display: inline-block;
+
+}
+
+.banner img {
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.banner a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.letter {
+    margin-left: 1rem;
+}
+
+.board .container {
+    padding-top: 1.5rem;
+}
+
+.board{
+    align-items: baseline;
+}
+
+header .board {
+    background-image: url(../img/blackboard.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+
+.board .bg-logo {
+    background-image: url(../img/logo-paideia.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left 1.5rem;
+    min-height: 10rem;
+
+}
+
+nav {
+    float: right;
+    margin-top: 2.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin:  0 1.5rem;
+    padding:  0 1rem;
+}
+
+nav li:last-child{
+    margin-right: 0;
+    padding-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.active {
+
+    border-bottom: 3px solid var(--yellow);
+    padding-bottom: 1rem;
+}
+
+.active a{
+    color: var(--yellow);
+}
+
+nav li:hover:not(.signup, .login) {
+    color: var(--white);
+    border-bottom: 3px solid var(--white);
+    padding-bottom: 1rem;
+}
+
+.login a:hover{
+    color: var(--main-color);
+    border: none;
+}
+
+.signup a{
+    color: var(--dark-color);
+    background-color: var(--white);
+    border-radius: 2.1rem;
+    padding: 1.25rem 2rem;
+}
+
+.signup a:hover{
+    color: var(--white);
+    background-color: var(--main-color);
+    border-radius: 2.1rem;
+    padding: 1.25rem 2rem;
+    border: none;
+}
+
+/* Estilos responsivos */
+/* Estilos para mobil */
+@media (max-width: 575px) {
+    .container {
+        /* max-width: 450px; */
+        width: 100%;
+    }
+
+    .banner {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .banner li {
+        display: inline;
+    }
+
+    .banner div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .board .bg-logo {
+        background-size: 31%;
+    }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        /* max-width: 540px; */
+        width: 100%;
+
+    }
+
+    .banner {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .banner li {
+        display: inline-flex;
+    }
+
+    .board .bg-logo {
+        background-size: 31%;
+    }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        /* max-width: 540px; */
+        width: 100%;
+
+    }
+
+    .banner {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .banner li {
+        display: inline-flex;
+    }
+
+    .board .bg-logo {
+        background-size: 18%;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1999px) {
+    .container {
+        max-width: 922px;
+        width: 94%;
+    }
+
+    .banner {
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .banner li {
+        display: inline-block;
+
+    }
+
+    /* .banner div{
+        width: 47%;
+        text-align: center;
+    } */
+
+    /* .logo {
+        width: 18%;
+        height: auto;
+    } */
+}
+
+/* Estilos para ordenadores */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        width: 94%;
+    }
+
+    .banner {
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .banner li {
+        display: inline-block;
+    }
+
+    /* .logo {
+        width: 18%;
+        height: auto;
+    } */
+
+    .board .bg-logo {
+        background-size: 18%;
+    }
+
+}
