@@ -39,6 +39,23 @@
     font-style: normal;
 }
 
+.text-55px {
+    font-size: 55px;
+}
+
+.text-60px {
+    font-size: 60px;
+}
+
+.white {
+    color: white;
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -76,12 +93,14 @@ main {
     padding-bottom: 3rem;
 }
 
-
 footer {
     font-size: 0.8rem;
     color: var(--text-color);
 }
 
+.mt-5rm{
+    margin-top: 5rem;
+}
 
 .container {
     margin-right: auto;
@@ -89,7 +108,6 @@ footer {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
 }
-
 
 .banner {
     display: flex;
@@ -116,11 +134,11 @@ footer {
     margin-left: 1rem;
 }
 
-.board .container {
+.menu {
     padding-top: 1.5rem;
 }
 
-.board{
+.board {
     align-items: baseline;
 }
 
@@ -130,36 +148,13 @@ header .board {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: auto;
+    min-height: 30rem;
 }
 
-.board .bg-logo {
-    background-image: url(../img/logo-paideia.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left 1.5rem;
-    min-height: 10rem;
-
-}
-
-nav {
-    float: right;
-    margin-top: 2.5rem;
-}
 
 nav ul {
+    display: none;
     list-style-type: none;
-}
-
-nav li {
-    display: inline;
-    margin:  0 1.5rem;
-    padding:  0 1rem;
-}
-
-nav li:last-child{
-    margin-right: 0;
-    padding-right: 0;
 }
 
 nav a {
@@ -168,45 +163,111 @@ nav a {
     font-weight: bold;
 }
 
-.active {
-
-    border-bottom: 3px solid var(--yellow);
-    padding-bottom: 1rem;
-}
-
-.active a{
+.active a {
     color: var(--yellow);
 }
 
-nav li:hover:not(.signup, .login) {
-    color: var(--white);
-    border-bottom: 3px solid var(--white);
-    padding-bottom: 1rem;
+#hamburger-toggle {
+    display: none;
 }
 
-.login a:hover{
-    color: var(--main-color);
-    border: none;
+.hamburger {
+    display: grid;
+    float: right;
+    place-content: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    /* Cambia el cursor a puntero para indicar que es clickeable */
+    position: relative;
+    /* Posiciona relativamente para poder posicionar los 'slices' absolutamente */
 }
 
-.signup a{
-    color: var(--dark-color);
+
+.slice {
+    display: block;
+    width: 3rem;
+    height: 2px;
+    border-bottom: 2px solid var(--white);
+    margin: 0.5rem auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.div-header-text {
+    text-align: center;
+}
+
+.search {
     background-color: var(--white);
-    border-radius: 2.1rem;
-    padding: 1.25rem 2rem;
+    ;
+    border-radius: 35px;
+    width: 55%;
+    margin: auto;
+    padding: 1rem 1rem 1rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.signup a:hover{
-    color: var(--white);
+.search button {
     background-color: var(--main-color);
-    border-radius: 2.1rem;
-    padding: 1.25rem 2rem;
+    border-radius: 21px;
     border: none;
+    width: 130px;
+    padding: 1.3rem;
+    color: var(--white);
+}
+
+.search button::before {
+    background-image: url(../img/search.svg);
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-left: .25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: " ";
+    float: left;
+}
+
+.search button,
+.search label {
+    font-size: 2rem;
+}
+
+.resum {
+    padding-top: 4rem;
+    display: grid;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
+}
+
+.grid {
+    display: grid;
+    padding-bottom: 7.5rem;
+    row-gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.grid div{
+    text-align: center;
+}
+
+.box {
+    text-align: center;
+    align-self: stretch;
+    justify-self: center;
+    color: white;
+}
+
+figcaption {
+    font-size: 2rem;
 }
 
 /* Estilos responsivos */
 /* Estilos para mobil */
-@media (max-width: 575px) {
+@media (max-width: 600px) {
     .container {
         /* max-width: 450px; */
         width: 100%;
@@ -226,13 +287,88 @@ nav li:hover:not(.signup, .login) {
         text-align: center;
     }
 
-    .board .bg-logo {
-        background-size: 31%;
+    .bg-logo {
+        width: 33%;
+        height: auto;
+    }
+
+    div.menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    /* Transformaciones cuando el menú hamburguesa está activo (checkbox checked) */
+    #hamburger-toggle:checked+nav .slice:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
+        /*Gira y mueve el primer 'slice' */
+    }
+
+    #hamburger-toggle:checked+nav .slice:nth-child(2) {
+        opacity: 0;
+        /* Oculta el segundo 'slice' */
+
+    }
+
+    #hamburger-toggle:checked+nav .slice:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -7px);
+        /*Gira y mueve el tercer 'slice' */
+    }
+
+    nav li {
+        width: 100%;
+        margin: 1.5rem 0 2rem 1.5rem;
+    }
+
+    #hamburger-toggle:checked~nav {
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        padding: 7.5rem 2rem 0 1.5rem;
+        position: fixed;
+        align-items: center;
+    }
+
+    #hamburger-toggle:checked~nav .hamburger {
+        float: right;
+        margin-right: 1.5rem;
+    }
+
+    #hamburger-toggle:checked~nav :is(ul) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #hamburger-toggle:checked~nav .open {
+        /* Hide the open button */
+        display: none;
+    }
+
+    .div-header-text {
+        width: 95%;
+        margin: auto auto;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .resum {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5rem;
     }
 }
 
+
 /* Estilos para tabletas */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 601px) and (max-width:1199px) {
     .container {
         /* max-width: 540px; */
         width: 100%;
@@ -250,63 +386,173 @@ nav li:hover:not(.signup, .login) {
         display: inline-flex;
     }
 
-    .board .bg-logo {
+    .bg-logo {
+        background-position: 1.5rem 1.5rem;
         background-size: 31%;
     }
-}
 
-/* Estilos para tabletas */
-@media (min-width: 768px) and (max-width: 991px) {
-    .container {
-        /* max-width: 540px; */
-        width: 100%;
-
-    }
-
-    .banner {
+    div.menu {
+        display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        align-items: center;
+        align-content: center;
     }
 
-    .banner li {
-        display: inline-flex;
+    /* Transformaciones cuando el menú hamburguesa está activo (checkbox checked) */
+    #hamburger-toggle:checked+nav .slice:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
+        /*Gira y mueve el primer 'slice' */
     }
 
-    .board .bg-logo {
-        background-size: 18%;
+    #hamburger-toggle:checked+nav .slice:nth-child(2) {
+        opacity: 0;
+        /* Oculta el segundo 'slice' */
+
+    }
+
+    #hamburger-toggle:checked+nav .slice:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -7px);
+        /*Gira y mueve el tercer 'slice' */
+    }
+
+    nav li {
+        width: 100%;
+        margin: 1.5rem 0 2rem 1.5rem;
+    }
+
+    #hamburger-toggle:checked~nav {
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        padding: 7.5rem 2rem 0 1.5rem;
+        position: fixed;
+        align-items: center;
+    }
+
+    #hamburger-toggle:checked~nav .hamburger {
+        float: right;
+        margin-right: 1.5rem;
+    }
+
+    #hamburger-toggle:checked~nav :is(ul) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #hamburger-toggle:checked~nav .open {
+        /* Hide the open button */
+        display: none;
+    }
+
+    .div-header-text {
+        width: 80%;
+        margin: auto auto;
+    }
+
+    .search {
+        width: 90%;
     }
 }
 
 
-@media (min-width: 992px) and (max-width: 1999px) {
+
+
+/* Estilos para tabletas*/
+/* @media (min-width: 992px) {
     .container {
         max-width: 922px;
-        width: 94%;
+        width: 100%;
     }
 
     .banner {
         flex-direction: row;
         justify-content: space-between;
-
     }
 
     .banner li {
         display: inline-block;
-
     }
 
-    /* .banner div{
-        width: 47%;
-        text-align: center;
-    } */
+    .bg-logo {
+        background-size: 18%;
+    }
 
-    /* .logo {
-        width: 18%;
-        height: auto;
-    } */
-}
+    nav {
+        display: flex;
+        float: right;
+        margin-top: 1.5rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: block;
+        list-style-type: none;
+    }
+
+    nav li {
+        width: auto;
+        display: inline-flex;
+        margin: 0 1.5rem;
+        padding: 0 1rem;
+    }
+
+    nav li:last-child {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--white);
+        font-weight: bold;
+    }
+
+    nav li:hover:not(.signup, .login) {
+        color: var(--white);
+        border-bottom: 3px solid var(--white);
+        padding-bottom: 1rem;
+    }
+
+    .active {
+        border-bottom: 3px solid var(--yellow);
+        padding-bottom: 1rem;
+    }
+
+    .login a:hover {
+        color: var(--main-color);
+        border: none;
+    }
+
+    .signup a {
+        color: var(--dark-color);
+        background-color: var(--white);
+        border-radius: 2.1rem;
+        padding: 1.25rem 2rem;
+    }
+
+    .signup a:hover {
+        color: var(--white);
+        background-color: var(--main-color);
+        border-radius: 2.1rem;
+        padding: 1.25rem 2rem;
+        border: none;
+    }
+
+    .div-header-text {
+        width: 65%;
+        margin: 5rem auto 0 auto;
+
+    }
+} */
 
 /* Estilos para ordenadores */
 @media (min-width: 1200px) {
@@ -325,13 +571,77 @@ nav li:hover:not(.signup, .login) {
         display: inline-block;
     }
 
-    /* .logo {
-        width: 18%;
-        height: auto;
-    } */
-
-    .board .bg-logo {
+    .bg-logo {
         background-size: 18%;
     }
 
+    nav {
+        display: flex;
+        float: right;
+        margin-top: 1.5rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: block;
+        list-style-type: none;
+    }
+
+    nav li {
+        width: auto;
+        display: inline-flex;
+        margin: 0 1.5rem;
+        padding: 0 1rem;
+    }
+
+    nav li:last-child {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--white);
+        font-weight: bold;
+    }
+
+    nav li:hover:not(.signup, .login) {
+        color: var(--white);
+        border-bottom: 3px solid var(--white);
+        padding-bottom: 1rem;
+    }
+
+    .active {
+        border-bottom: 3px solid var(--yellow);
+        padding-bottom: 1rem;
+    }
+
+    .login a:hover {
+        color: var(--main-color);
+        border: none;
+    }
+
+    .signup a {
+        color: var(--dark-color);
+        background-color: var(--white);
+        border-radius: 2.1rem;
+        padding: 1.15rem 2rem;
+    }
+
+    .signup a:hover {
+        color: var(--white);
+        background-color: var(--main-color);
+        border-radius: 2.1rem;
+        padding: 1.15rem 2rem;
+        border: none;
+    }
+
+    .div-header-text {
+        width: 50%;
+        margin: auto auto;
+
+    }
 }
