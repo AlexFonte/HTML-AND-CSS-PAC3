@@ -13,6 +13,9 @@
     --primary-font: "Montserrat", sans-serif;
     --second-font: "Satisfy", cursive;
     --white: #FFFFFF;
+    --border-10px: 1rem;
+    --border-21px: 2.1rem;
+    --border-35px: 3.5rem;
 }
 
 .satisfy-regular {
@@ -39,6 +42,10 @@
     font-style: normal;
 }
 
+.text-20px {
+    font-size: 20px;
+}
+
 .text-55px {
     font-size: 55px;
 }
@@ -54,7 +61,6 @@
 .yellow {
     color: var(--yellow);
 }
-
 
 * {
     margin: 0;
@@ -89,8 +95,12 @@ footer {
 }
 
 main {
-    padding-top: 3rem;
+    padding-top: 5rem;
     padding-bottom: 3rem;
+}
+
+main h2 {
+    color: var(--main-color);
 }
 
 footer {
@@ -98,15 +108,19 @@ footer {
     color: var(--text-color);
 }
 
-.mt-5rm{
+/* CONTENIDOR PRINCIPAL I MENU */
+a {
+    text-decoration: none;
+}
+
+.mt-5rm {
     margin-top: 5rem;
 }
 
 .container {
     margin-right: auto;
     margin-left: auto;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    width: 100%;
 }
 
 .banner {
@@ -117,7 +131,6 @@ footer {
 .banner li {
     list-style: none;
     display: inline-block;
-
 }
 
 .banner img {
@@ -138,11 +151,8 @@ footer {
     padding-top: 1.5rem;
 }
 
-.board {
-    align-items: baseline;
-}
-
 header .board {
+    align-items: baseline;
     background-image: url(../img/blackboard.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -200,7 +210,8 @@ nav a {
 .search {
     background-color: var(--white);
     ;
-    border-radius: 35px;
+    border-radius: var(--border-35px);
+    ;
     width: 55%;
     margin: auto;
     padding: 1rem 1rem 1rem 4rem;
@@ -217,6 +228,12 @@ nav a {
     width: 130px;
     padding: 1.3rem;
     color: var(--white);
+}
+
+.search button:hover {
+    background-color: var(--text-color);
+    color: var(--white);
+    cursor: pointer;
 }
 
 .search button::before {
@@ -243,6 +260,17 @@ nav a {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
 }
 
+/* ESTILS DE PAGINES ESPECIFICS */
+
+.subtitle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.subtitle+p {
+    margin-bottom: 1.5rem;
+}
+
 .grid {
     display: grid;
     padding-bottom: 7.5rem;
@@ -250,7 +278,21 @@ nav a {
     grid-template-columns: repeat(1, 1fr);
 }
 
-.grid div{
+.grid-courses {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Elemenis dintre dels cursos */
+.course {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border-radius: var(--border-10px);
+    border: 1px solid var(--border-color);
+}
+
+.grid div {
     text-align: center;
 }
 
@@ -261,16 +303,179 @@ nav a {
     color: white;
 }
 
-figcaption {
-    font-size: 2rem;
+
+.course figure {
+    text-align: left;
+    position: relative;
+    object-fit: contain;
+}
+
+.course figure h3 {
+    color: var(--dark-color);
+    padding-top: 1rem;
+}
+
+.course figcaption {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.course img.fluid {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-top-left-radius: var(--border-10px);
+    ;
+    border-top-right-radius: var(--border-10px);
+    ;
+    aspect-ratio: 600/400;
+}
+
+.course:last-child img.fluid {
+    object-fit: cover;
+}
+
+.course figure h3,
+.course figure figcaption {
+    width: 94%;
+    margin: auto;
+}
+
+.course figcaption p {
+    width: 75%;
+}
+
+.course figcaption span {
+    vertical-align: text-bottom;
+}
+
+.lessons {
+    display: inline-flex;
+    align-items: center;
+    background-size: 17px;
+    background-image: url(../img/lessons.svg);
+    background-repeat: no-repeat;
+    padding-left: 2rem;
+}
+
+.timing {
+    display: inline-flex;
+    align-items: center;
+    background-size: 17px;
+    background-image: url(../img/duration.svg);
+    background-repeat: no-repeat;
+    padding-left: 2rem;
+}
+
+.level {
+    display: inline-flex;
+    align-items: center;
+    background-size: 17px;
+    background-image: url(../img/level.svg);
+    background-repeat: no-repeat;
+    padding-left: 2rem;
+}
+
+.course figure .target-best-seller,
+.course figure .target-new {
+    border-radius: var(--border-21px);
+    padding: .5rem 1rem;
+    margin: 1rem;
+    position: absolute;
+
+}
+
+.course figure .target-new {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+.course figure .target-best-seller {
+    background-color: var(--yellow);
+    color: var(--main-color);
+    right: 0;
+}
+
+.course:hover {
+    border-radius: var(--border-10px);
+    border: 1px solid var(--text-color);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.course-all {
+    width: 100%;
+    text-align: center;
+    margin: 5rem 0 10rem 0;
+}
+
+a.button {
+    border-radius: var(--border-10px);
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+}
+
+.course-all a {
+    color: var(--main-color);
+    background-color: var(--white);
+    border: 1px solid var(--main-color);
+}
+
+.course-all a:hover {
+    color: var(--white);
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+}
+
+
+.learn {
+    background-image: url(../img/learn-path.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 40rem;
+    vertical-align: middle;
+    text-align: center;
+    padding: 7rem 0;
+}
+
+.learn .container{
+    margin-top: 0;
+}
+
+
+.learn p{
+    margin-top: 2rem;
+}
+.learn div {
+    margin-top: 5rem;
+}
+
+
+.learn a {
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.learn a:hover {
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
 }
 
 /* Estilos responsivos */
 /* Estilos para mobil */
 @media (max-width: 600px) {
     .container {
-        /* max-width: 450px; */
-        width: 100%;
+        max-width: 600px;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
     }
 
     .banner {
@@ -288,7 +493,7 @@ figcaption {
     }
 
     .bg-logo {
-        width: 33%;
+        width: 90%;
         height: auto;
     }
 
@@ -299,6 +504,7 @@ figcaption {
         justify-content: space-between;
         align-items: center;
         align-content: center;
+        text-align: left;
     }
 
     /* Transformaciones cuando el menú hamburguesa está activo (checkbox checked) */
@@ -332,6 +538,7 @@ figcaption {
         padding: 7.5rem 2rem 0 1.5rem;
         position: fixed;
         align-items: center;
+
     }
 
     #hamburger-toggle:checked~nav .hamburger {
@@ -364,16 +571,28 @@ figcaption {
         grid-template-columns: repeat(1, 1fr);
         gap: 5rem;
     }
+
+    .search button,
+    .search label {
+        font-size: 1.7rem;
+    }
+
+    .course img.fluid {
+        object-fit: cover;
+        aspect-ratio: 600/200;
+    }
 }
 
 
 /* Estilos para tabletas */
-@media (min-width: 601px) and (max-width:1199px) {
+@media (601px <=width < 992px) {
     .container {
-        /* max-width: 540px; */
-        width: 100%;
+        max-width: 991px;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
 
     }
+
 
     .banner {
         flex-direction: row;
@@ -398,6 +617,7 @@ figcaption {
         justify-content: space-between;
         align-items: center;
         align-content: center;
+        text-align: left;
     }
 
     /* Transformaciones cuando el menú hamburguesa está activo (checkbox checked) */
@@ -416,6 +636,7 @@ figcaption {
         transform: rotate(-45deg) translate(6px, -7px);
         /*Gira y mueve el tercer 'slice' */
     }
+
 
     nav li {
         width: 100%;
@@ -458,101 +679,122 @@ figcaption {
     .search {
         width: 90%;
     }
+
+    .grid-courses {
+        gap: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course img.fluid {
+        object-fit: cover;
+        aspect-ratio: 600/300;
+    }
 }
 
-
-
-
 /* Estilos para tabletas*/
-/* @media (min-width: 992px) {
+@media (992px <=width < 1200px) {
     .container {
-        max-width: 922px;
-        width: 100%;
+        max-width: 1199px;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
     }
 
     .banner {
         flex-direction: row;
         justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .banner li {
-        display: inline-block;
+        display: inline-flex;
     }
 
     .bg-logo {
-        background-size: 18%;
+        background-position: 1.5rem 1.5rem;
+        background-size: 31%;
     }
 
-    nav {
+    div.menu {
         display: flex;
-        float: right;
-        margin-top: 1.5rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        text-align: left;
     }
 
-    .hamburger {
+    /* Transformaciones cuando el menú hamburguesa está activo (checkbox checked) */
+    #hamburger-toggle:checked+nav .slice:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
+        /*Gira y mueve el primer 'slice' */
+    }
+
+    #hamburger-toggle:checked+nav .slice:nth-child(2) {
+        opacity: 0;
+        /* Oculta el segundo 'slice' */
+
+    }
+
+    #hamburger-toggle:checked+nav .slice:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -7px);
+        /*Gira y mueve el tercer 'slice' */
+    }
+
+
+    nav li {
+        width: 100%;
+        margin: 1.5rem 0 2rem 1.5rem;
+    }
+
+    #hamburger-toggle:checked~nav {
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        padding: 7.5rem 2rem 0 1.5rem;
+        position: fixed;
+        align-items: center;
+    }
+
+    #hamburger-toggle:checked~nav .hamburger {
+        float: right;
+        margin-right: 1.5rem;
+    }
+
+    #hamburger-toggle:checked~nav :is(ul) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #hamburger-toggle:checked~nav .open {
+        /* Hide the open button */
         display: none;
     }
 
-    nav ul {
-        display: block;
-        list-style-type: none;
-    }
-
-    nav li {
-        width: auto;
-        display: inline-flex;
-        margin: 0 1.5rem;
-        padding: 0 1rem;
-    }
-
-    nav li:last-child {
-        margin-right: 0;
-        padding-right: 0;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: var(--white);
-        font-weight: bold;
-    }
-
-    nav li:hover:not(.signup, .login) {
-        color: var(--white);
-        border-bottom: 3px solid var(--white);
-        padding-bottom: 1rem;
-    }
-
-    .active {
-        border-bottom: 3px solid var(--yellow);
-        padding-bottom: 1rem;
-    }
-
-    .login a:hover {
-        color: var(--main-color);
-        border: none;
-    }
-
-    .signup a {
-        color: var(--dark-color);
-        background-color: var(--white);
-        border-radius: 2.1rem;
-        padding: 1.25rem 2rem;
-    }
-
-    .signup a:hover {
-        color: var(--white);
-        background-color: var(--main-color);
-        border-radius: 2.1rem;
-        padding: 1.25rem 2rem;
-        border: none;
-    }
-
     .div-header-text {
-        width: 65%;
-        margin: 5rem auto 0 auto;
-
+        width: 80%;
+        margin: auto auto;
     }
-} */
+
+    .search {
+        width: 90%;
+    }
+
+    .grid-courses {
+        gap: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course img.fluid {
+        object-fit: fill;
+        aspect-ratio: 600/300;
+    }
+}
 
 /* Estilos para ordenadores */
 @media (min-width: 1200px) {
@@ -564,7 +806,6 @@ figcaption {
     .banner {
         flex-direction: row;
         justify-content: space-between;
-
     }
 
     .banner li {
@@ -573,6 +814,8 @@ figcaption {
 
     .bg-logo {
         background-size: 18%;
+        height: auto;
+        float: left;
     }
 
     nav {
@@ -627,14 +870,15 @@ figcaption {
     .signup a {
         color: var(--dark-color);
         background-color: var(--white);
-        border-radius: 2.1rem;
+        border-radius: var(--border-21px);
         padding: 1.15rem 2rem;
     }
 
     .signup a:hover {
         color: var(--white);
         background-color: var(--main-color);
-        border-radius: 2.1rem;
+        border-radius: var(--border-21px);
+        ;
         padding: 1.15rem 2rem;
         border: none;
     }
@@ -642,6 +886,11 @@ figcaption {
     .div-header-text {
         width: 50%;
         margin: auto auto;
-
     }
+
+    .grid-courses {
+        gap: 3rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
 }
