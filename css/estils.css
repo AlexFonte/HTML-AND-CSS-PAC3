@@ -810,7 +810,7 @@ article>p {}
     color: var(--main-color);
 }
 
-.steps h3 {
+.steps-sections h3 {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-color);
