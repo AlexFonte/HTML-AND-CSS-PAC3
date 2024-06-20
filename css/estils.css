@@ -62,6 +62,10 @@
     color: var(--yellow);
 }
 
+.dark-color {
+    color: var(--dark-color);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -181,6 +185,12 @@ nav a {
     display: none;
 }
 
+.bg-logo {
+    width: 35%;
+    height: auto;
+    float: left;
+}
+
 .hamburger {
     display: grid;
     float: right;
@@ -209,9 +219,7 @@ nav a {
 
 .search {
     background-color: var(--white);
-    ;
     border-radius: var(--border-35px);
-    ;
     width: 55%;
     margin: auto;
     padding: 1rem 1rem 1rem 4rem;
@@ -284,6 +292,12 @@ nav a {
     grid-template-columns: repeat(1, 1fr);
 }
 
+.felx-learn {
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+}
+
 /* Elemenis dintre dels cursos */
 .course {
     display: grid;
@@ -331,9 +345,7 @@ nav a {
     height: auto;
     object-fit: contain;
     border-top-left-radius: var(--border-10px);
-    ;
     border-top-right-radius: var(--border-10px);
-    ;
     aspect-ratio: 600/400;
 }
 
@@ -414,19 +426,22 @@ nav a {
     margin: 5rem 0 10rem 0;
 }
 
+
 a.button {
     border-radius: var(--border-10px);
     padding: 1.5rem 1rem;
     font-size: 1.5rem;
 }
 
-.course-all a {
+.course-all a,
+.btn-solutions a {
     color: var(--main-color);
     background-color: var(--white);
     border: 1px solid var(--main-color);
 }
 
-.course-all a:hover {
+.course-all a:hover,
+.learn-btn a:hover {
     color: var(--white);
     background-color: var(--main-color);
     border: 1px solid var(--main-color);
@@ -446,18 +461,17 @@ a.button {
     padding: 7rem 0;
 }
 
-.learn .container{
+.learn .container {
     margin-top: 0;
 }
 
-
-.learn p{
+.learn p {
     margin-top: 2rem;
 }
+
 .learn div {
     margin-top: 5rem;
 }
-
 
 .learn a {
     color: var(--white);
@@ -469,13 +483,123 @@ a.button {
     border: 1px solid var(--yellow);
 }
 
+.start-learning {
+    color: var(--text-color);
+    margin: 5rem 0;
+}
+
+.flex-learn {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: left;
+    gap: 4rem;
+}
+
+.round {
+    border-radius: 50%;
+    padding: 1.5rem;
+}
+
+.round img {
+    object-fit: fill;
+    padding: .5rem;
+}
+
+.flex-solutions,
+.solutions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.grid-solutions {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.leadership,
+.promotion,
+.rocket {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.leadership .round {
+    background-color: var(--bg-light-green);
+}
+
+.promotion .round {
+    background-color: var(--bg-light-blue);
+}
+
+.rocket .round {
+    background-color: var(--bg-light-orange);
+}
+
+/* .learn-width {
+    width: 90%;
+} */
+
+.bg-student {
+    text-align: center;
+}
+
+.bg-student img {
+
+    border-radius: var(--border-10px);
+    object-fit: contain;
+}
+
+.top-categories {
+
+    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    background-color: var(--border-color);
+    padding: 10rem 0;
+}
+
+.top-categories .subtitle {
+    text-align: center;
+}
+
+.grid-cat{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap:3rem
+}
+
+.grid-cat div{
+    text-align: center;
+    background-color: var(--text-color);
+    color: white;
+    border-radius: 21px;
+    display: grid;
+    gap: 2rem;
+    grid-template-rows: auto;
+    padding: 3rem 0;
+}
+
+.grid-cat h3{
+    font-size: 1.7rem;
+}
+
+
+
 /* Estilos responsivos */
 /* Estilos para mobil */
 @media (max-width: 600px) {
     .container {
         max-width: 600px;
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
 
     .banner {
@@ -491,12 +615,6 @@ a.button {
         width: 100%;
         text-align: center;
     }
-
-    .bg-logo {
-        width: 90%;
-        height: auto;
-    }
-
     div.menu {
         display: flex;
         flex-direction: row;
@@ -581,6 +699,15 @@ a.button {
         object-fit: cover;
         aspect-ratio: 600/200;
     }
+
+    .bg-student img {
+        width: 300px;
+        height: 350px;
+    }
+
+    .btn-solutions {
+        padding: 5rem 0 3rem 11rem;
+    }
 }
 
 
@@ -606,8 +733,7 @@ a.button {
     }
 
     .bg-logo {
-        background-position: 1.5rem 1.5rem;
-        background-size: 31%;
+        width: 30%;
     }
 
     div.menu {
@@ -689,6 +815,16 @@ a.button {
         object-fit: cover;
         aspect-ratio: 600/300;
     }
+
+    .btn-solutions {
+        padding: 5rem 0 3rem 11rem;
+    }
+
+    .bg-student img {
+        width: 400px;
+        height: 450px;
+        object-fit: cover;
+    }
 }
 
 /* Estilos para tabletas*/
@@ -711,8 +847,7 @@ a.button {
     }
 
     .bg-logo {
-        background-position: 1.5rem 1.5rem;
-        background-size: 31%;
+        width: 20%;
     }
 
     div.menu {
@@ -794,6 +929,16 @@ a.button {
         object-fit: fill;
         aspect-ratio: 600/300;
     }
+
+    .btn-solutions {
+        padding: 5rem 0 3rem 11rem;
+    }
+
+    .bg-student img {
+        width: 400px;
+        height: 450px;
+        object-fit: cover;
+    }
 }
 
 /* Estilos para ordenadores */
@@ -813,9 +958,8 @@ a.button {
     }
 
     .bg-logo {
-        background-size: 18%;
+        width: 17%;
         height: auto;
-        float: left;
     }
 
     nav {
@@ -893,4 +1037,39 @@ a.button {
         grid-template-columns: repeat(4, 1fr);
     }
 
+    .start-learning {
+        margin-bottom: 11rem;
+    }
+
+    .bg-student {
+        position: relative;
+        text-align: left;
+    }
+
+    .bg-student img {
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 0 7.5rem;
+    }
+
+    .solutions {
+        margin-bottom: 5rem;
+    }
+
+    .flex-solutions {
+        flex-direction: row;
+    }
+
+    .grid-solutions {
+        width: 47%;
+    }
+
+    .btn-solutions {
+        position: relative;
+    }
+
+    .btn-solutions a {
+        position: absolute;
+        left: 11rem;
+    }
 }
