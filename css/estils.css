@@ -485,7 +485,7 @@ a.button {
 
 .start-learning {
     color: var(--text-color);
-    margin: 5rem 0;
+    padding: 5rem 0;
 }
 
 .flex-learn {
@@ -560,8 +560,9 @@ a.button {
 
 .top-categories {
 
-    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
     background-color: var(--border-color);
+     /* linear-gradient(to bottom,  var(--border-color), var(--bg-light-blue)); */
     padding: 10rem 0;
 }
 
@@ -577,14 +578,16 @@ a.button {
 }
 
 .grid-cat div{
-    text-align: center;
     background-color: var(--text-color);
     color: white;
     border-radius: 21px;
+    padding: 3rem 0;
     display: grid;
     gap: 2rem;
     grid-template-rows: auto;
-    padding: 3rem 0;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .grid-cat h3{
@@ -720,7 +723,6 @@ a.button {
 
     }
 
-
     .banner {
         flex-direction: row;
         justify-content: space-between;
@@ -762,7 +764,6 @@ a.button {
         transform: rotate(-45deg) translate(6px, -7px);
         /*Gira y mueve el tercer 'slice' */
     }
-
 
     nav li {
         width: 100%;
@@ -824,6 +825,10 @@ a.button {
         width: 400px;
         height: 450px;
         object-fit: cover;
+    }
+
+    .grid-cat{
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -939,6 +944,10 @@ a.button {
         height: 450px;
         object-fit: cover;
     }
+
+    .grid-cat{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* Estilos para ordenadores */
@@ -1038,7 +1047,7 @@ a.button {
     }
 
     .start-learning {
-        margin-bottom: 11rem;
+        padding-bottom: 11rem;
     }
 
     .bg-student {
@@ -1072,4 +1081,15 @@ a.button {
         position: absolute;
         left: 11rem;
     }
+
+    .grid-cat{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .grid-span-2{
+        grid-column: 3;
+        grid-row: 1 /span 2;
+        align-items: ;
+    }
+
 }
