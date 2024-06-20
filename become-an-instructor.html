@@ -16,13 +16,13 @@
 
 <body>
     <header>
-        <section class="fucsia">
+        <div class="fucsia">
             <div class="container">
                 <div class="banner">
                     <div class="contact">
                         <ul>
                             <li>
-                                <a href="tel:(00) 242 844 39 88">
+                                <a href="tel:(00)2428443988">
                                     <img src="img/phone.svg" alt="phone image">(00) 242 844 30 88</a>
                             </li>
                             <li>
@@ -51,21 +51,23 @@
                         </ul>
                     </div>
                 </div>
-        </section>
-        <section class="board">
-            <div class="container">
-                <div class="nav">
-                    <img class="bg-logo" src="img/logo-paideia.svg" alt="logo paideia" width="auto" height="auto">
-
-                    <input aria-hidden="true" type="checkbox" id="hamburger-toggle" />
-                    <nav class="menu">
+            </div>
+        </div>
+        <div class="board">
+            <div class="container grid">
+                <div class="menu">
+                    <a href="index.html">
+                        <img class="bg-logo" src="img/logo-paideia.svg" alt="logo paideia">
+                    </a>
+                    <input aria-hidden="true" type="checkbox" id="hamburger-toggle">
+                    <nav>
                         <label class="hamburger" for="hamburger-toggle">
                             <span class="slice"></span>
                             <span class="slice"></span>
                             <span class="slice"></span>
                         </label>
-                        <ul>
-                            <li class="active"><a href="index.html">Home</a></li>
+                        <ul class="burger">
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="">Search Courses</a></li>
                             <li class="active"><a href="become-an-instructor.html">Become an Instructor</a></li>
                             <li><a href="contact.html">Contact</a></li>
@@ -74,17 +76,92 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="div-header-text">
-                    <p class="satisfy-regular text-55px header-text"><span class="white">Learn your way with Paideia to
-                        </span><span class="yellow">Online Learning</span></p>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="hight-flex">
+                <div>
+                    <section class="">
+                        <h1>Become an instructor</h1>
+                        <p>Are you thinking of becoming an Instructor? Or have you already started your career and are planning the next step? Learn how to become an Instructor, what skills you need to succeed and how to advance your career and get promoted and what levels of pay to expect at each step on your career path. Explore new Instructor job openings and options for career transitions into related roles.</p>
+                        <div class="imgs">
+                            <img class="img-instructor" src="img/instructor.jpg" alt="imatge d'un professor" width="520" height="375">
+
+                        </div>
+                    </section>
+                </div>
+                <div class="panel-right">
+                    <p>aaa</p>
                 </div>
             </div>
-        </section>
-    </header>
-    <main></main>
+        </div>
+    </main>
+
     <footer>
         <div class="container">
-
+            <div class="footer-logo">
+                <div class="subscribe">
+                    <form action="#" method="post">
+                        <label for="email">Subscribe to our newsletter</label>
+                        <div class="subs">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <button type="submit">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" preserveAspectRatio="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.707 5.57195C13.7067 5.5717 13.7065 5.57142 13.7062 5.57117L8.69774 0.562707C8.30483 0.173268 7.6706 0.176085 7.28116 0.568999C7.25039 0.600052 7.22169 0.633076 7.1952 0.667885C6.91439 1.08675 6.97568 1.64691 7.34045 1.99513L10.1051 4.76982C10.2521 4.91694 10.4211 5.04031 10.606 5.13544L10.9115 5.29571H1.06985C0.565909 5.27451 0.119843 5.61913 0.0130684 6.11209C-0.0754875 6.65816 0.295389 7.17266 0.8415 7.26122C0.898784 7.27051 0.956757 7.2748 1.01476 7.27405H10.8915L10.6761 7.37422C10.466 7.47235 10.2745 7.60624 10.1101 7.76989L7.34045 10.5396C6.97568 10.8878 6.91439 11.4479 7.1952 11.8668C7.52204 12.3132 8.14882 12.4101 8.5952 12.0832C8.63126 12.0568 8.66553 12.028 8.69774 11.997L13.7062 6.98857C14.0976 6.59759 14.0979 5.96337 13.707 5.57195Z"
+                                        fill="#1A064F" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Notice</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="index.html">
+                        <img class="footer-logo" src="img/logo-paideia.svg" alt="logo paideia">
+                    </a>
+                    <ul>
+                        <li><span class="montserrat-bold">Toll Free Customer Care </span><a
+                                href="tel:(00)2428443988">(00) 242 844 39 88</a></li>
+                        <li><span class="montserrat-bold">Need live support? </span><a
+                                href="mailto:info@paideia.edu">info@paideia.edu</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <p>Photos by <a
+                        href="https://www.pexels.com/es-es/foto/feliz-mujer-etnica-sentada-a-la-mesa-con-el-portatil-3769021/"
+                        target="_blank">Andrea Piacquadio</a>, <a
+                        href="https://www.pexels.com/es-es/foto/persona-sosteniendo-vegetales-en-rodajas-2284166/"
+                        target="_blank">Maarten van den Heuvel</a>, <a
+                        href="https://www.pexels.com/es-es/foto/foto-de-persona-sosteniendo-rollo-de-hilo-marron-3654772/"
+                        target="_blank">Caroline Feelgood</a>, <a
+                        href="https://www.pexels.com/es-es/foto/triturar-madera-marron-175709/" target="_blank">Clem
+                        Onojeghuo</a>, <a
+                        href="https://www.pexels.com/es-es/foto/plantas-suculentas-verdes-y-moradas-2132240/"
+                        target="_blank">Quang Nguyen Vinh</a>, <a
+                        href="https://www.pexels.com/es-es/foto/fotografia-de-foco-superficial-de-pincel-102127/"
+                        target="_blank">Daian Gan</a>, <a
+                        href="https://www.pexels.com/es-es/foto/templo-griego-antiguo-951531/" target="_blank">Jimmy
+                        Teoh</a>, <a
+                        href="https://www.pexels.com/es-es/foto/fotografia-de-enfoque-selectivo-de-mujer-sosteniendo-camara-reflex-digital-1264210/"
+                        target="_blank">André Furtado</a>, <a
+                        href="https://www.pexels.com/es-es/foto/hombre-en-chaqueta-de-traje-marron-con-anteojos-con-marco-negro-5212317/"
+                        target="_blank">Katerina Holmes</a> and <a
+                        href="https://www.pexels.com/es-es/foto/feliz-mujer-negra-usando-laptop-para-trabajo-en-linea-5905713/"
+                        target="_blank">Stefan Scheiwhofer</a>.
+                </p>
+            </div>
         </div>
     </footer>
 </body>

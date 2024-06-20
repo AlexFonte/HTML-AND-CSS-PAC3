@@ -162,9 +162,8 @@ header .board {
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 30rem;
+    min-height: 3rem;
 }
-
 
 nav ul {
     display: none;
@@ -333,6 +332,7 @@ footer p a:last-child {
     color: white;
     font-size: 1.5rem;
 }
+
 .search input::placeholder {
     color: var(--text-color);
 }
@@ -385,9 +385,9 @@ input:focus-visible {
     margin-bottom: 1.5rem;
 }
 
-.grid {
+.board .grid {
     display: grid;
-    padding-bottom: 7.5rem;
+    padding-bottom: 3rem;
     row-gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
 }
@@ -722,13 +722,32 @@ a.button {
     align-items: center;
 }
 
-.grid-instructor img {
+.grid-instructor img,
+.img-instructor {
     width: 100%;
     height: auto;
     object-fit: contain;
     aspect-ratio: 520 / 375;
+}
+
+.grid-instructor img {
     border-radius: var(--border-10px);
 }
+
+.imgs{
+    text-align: center;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+
+
+.img-instructor{
+    margin-top: 3rem;
+    width: 100%;
+    box-shadow: 10px 10px 8px #33333333;
+}
+
 
 .instructor .btn {
     margin-top: 3rem;
@@ -736,6 +755,28 @@ a.button {
 
 .instructor {
     box-shadow: inset 0px 3px 10px 0px white;
+}
+
+
+.hight-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    gap: 1rem;
+    color: var(--text-color);
+}
+
+.hight-flex h1 {
+    font-size: 3.5rem;
+    color: var(--main-color);
+}
+
+.hight-flex h2 {
+    color: var(--dark-color);
 }
 
 /* Estilos responsivos */
@@ -829,6 +870,10 @@ a.button {
 
     .search {
         width: 100%;
+    }
+
+    .search input {
+        width: 70%;
     }
 
     .resum {
@@ -948,6 +993,11 @@ a.button {
 
     .search {
         width: 90%;
+
+    }
+
+    .search input {
+        width: 70%;
     }
 
     .footer-logo {
@@ -1081,6 +1131,9 @@ a.button {
         width: 90%;
     }
 
+    .search input {
+        width: 70%;
+    }
 
     .footer-logo {
         flex-direction: row;
@@ -1272,8 +1325,10 @@ a.button {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* .grid-instructor div{
-        grid-column: 1;
-        grid-row: 1 /span 2;
-    } */
+    .hight-flex {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 }
