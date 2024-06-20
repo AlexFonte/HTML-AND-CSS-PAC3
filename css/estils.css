@@ -790,7 +790,6 @@ article p {
     margin-bottom: 2rem;
 }
 
-article>p {}
 
 .steps {
     border: 2px solid var(--main-color);
@@ -829,7 +828,6 @@ ol {
 
 ol li {
     counter-increment: item;
-    width: 90%;
 }
 
 ol li h3::before {
