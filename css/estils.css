@@ -99,7 +99,7 @@ footer {
 
 }
 
-footer p{
+footer p {
     margin-top: 3rem;
 }
 
@@ -234,9 +234,9 @@ ul {
 
 .search button {
     background-color: var(--main-color);
-    border-radius: 21px;
+    border-radius: 2.1rem;
     border: none;
-    width: 130px;
+    width: 15rem;
     padding: 1.3rem;
     color: var(--white);
 }
@@ -259,7 +259,7 @@ ul {
 }
 
 .search button,
-.search label {
+.search input {
     font-size: 2rem;
 }
 
@@ -271,33 +271,38 @@ ul {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
 }
 
-footer a{
+footer a {
     color: var(--white);
 }
 
-footer a:hover{
+footer a:hover {
     text-decoration: underline;
 }
 
-footer p a{
+footer p a {
     background-color: #FFFFFF40;
 }
 
-.subscribe ul {
-    margin-top: 2rem;
-}
-.subscribe ul li{
-    display: inline-block;
-    margin-right: 1rem;
+footer p a:last-child {
+    background-color: transparent;
 }
 
-.footer-logo{
+.subscribe ul {
+    margin-top: 3rem;
+}
+
+.subscribe ul li {
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+
+.footer-logo {
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: wrap;
     align-content: stretch;
-    justify-content: space-evenly;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 5rem;
 }
 
 .subscribe label {
@@ -305,8 +310,8 @@ footer p a{
 }
 
 .subs {
-    margin-top: 1rem;
-    width: 80%;
+    margin-top: 1.5rem;
+    width: 81%;
     padding: 1.5rem 1.5rem;
     background-color: #FFFFFF33;
     border-radius: var(--border-35px);
@@ -316,16 +321,24 @@ footer p a{
     align-items: center;
 }
 
-.subs input{
+.search input,
+.subs input {
     background-color: transparent;
-    padding: 0.8rem;
+    padding: 0.8rem 0.5rem;
     border: none;
-    width: 85%;
+    width: 100%;
+}
+
+.subs input {
     color: white;
+    font-size: 1.5rem;
+}
+.search input::placeholder {
+    color: var(--text-color);
 }
 
 
-.subs input::placeholder{
+.subs input::placeholder {
     color: var(--white);
 }
 
@@ -336,23 +349,27 @@ footer p a{
     border: none;
 }
 
+input:focus-visible {
+    outline: none;
+}
+
 .subs svg {
-    width: 3.5rem;
-    height: 3.5rem;
+    height: 4rem;
     padding: .8rem;
     float: right;
     border-radius: 50%;
     width: 100%;
 }
+
 .subs button:hover {
     background-color: var(--main-color);
 }
 
-.subs button:hover svg path{
+.subs button:hover svg path {
     fill: white;
 }
 
-.footer-paideia{
+.footer-paideia {
     width: 50%;
 }
 
@@ -531,11 +548,19 @@ a.button {
 }
 
 .course-all a:hover,
-.learn-btn a:hover {
+.btn-solutions a:hover,
+.grid-instructor a:hover,
+.grid-cat a:hover {
     color: var(--white);
     background-color: var(--main-color);
-    border: 1px solid var(--main-color);
     cursor: pointer;
+}
+
+.course-all a:hover,
+.btn-solutions a:hover,
+.grid-instructor a:hover {
+    border: 1px solid var(--main-color);
+
 }
 
 
@@ -667,7 +692,7 @@ a.button {
     gap: 3rem
 }
 
-.grid-cat div {
+.grid-cat a {
     background-color: var(--text-color);
     color: white;
     border-radius: 21px;
@@ -841,10 +866,6 @@ a.button {
 
     }
 
-    .footer-logo{
-        flex-direction: column;
-    }
-
     .banner {
         flex-direction: row;
         justify-content: space-between;
@@ -927,6 +948,15 @@ a.button {
 
     .search {
         width: 90%;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+    }
+
+    .subs {
+        margin-top: 1.5rem;
+        width: 42.5rem;
     }
 
     .grid-courses {
@@ -1051,6 +1081,16 @@ a.button {
         width: 90%;
     }
 
+
+    .footer-logo {
+        flex-direction: row;
+    }
+
+    .subs {
+        margin-top: 1.5rem;
+        width: 42.5rem;
+    }
+
     .grid-courses {
         gap: 3rem;
         grid-template-columns: repeat(2, 1fr);
@@ -1130,13 +1170,14 @@ a.button {
         font-weight: bold;
     }
 
-    nav li:hover:not(.signup, .login) {
+    nav li:hover:not(.signup, .login, .active) {
         color: var(--white);
         border-bottom: 3px solid var(--white);
         padding-bottom: 1rem;
     }
 
     .active {
+        color: var(--yellow);
         border-bottom: 3px solid var(--yellow);
         padding-bottom: 1rem;
     }
@@ -1170,6 +1211,16 @@ a.button {
     .grid-courses {
         gap: 3rem;
         grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    .footer-logo {
+        flex-direction: row;
+    }
+
+    .subs {
+        margin-top: 1.5rem;
+        width: 42.5rem;
     }
 
     .start-learning {
