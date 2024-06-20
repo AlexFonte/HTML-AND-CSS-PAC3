@@ -92,10 +92,15 @@ header .fucsia {
 }
 
 footer {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 5rem 0;
     background-color: var(--text-color);
+    font-size: 1.3rem;
+    color: var(--white);
 
+}
+
+footer p{
+    margin-top: 3rem;
 }
 
 main {
@@ -105,11 +110,6 @@ main {
 
 main h2 {
     color: var(--main-color);
-}
-
-footer {
-    font-size: 0.8rem;
-    color: var(--text-color);
 }
 
 /* CONTENIDOR PRINCIPAL I MENU */
@@ -203,6 +203,9 @@ nav a {
     /* Posiciona relativamente para poder posicionar los 'slices' absolutamente */
 }
 
+ul {
+    list-style-type: none;
+}
 
 .slice {
     display: block;
@@ -267,6 +270,92 @@ nav a {
     column-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
 }
+
+footer a{
+    color: var(--white);
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+footer p a{
+    background-color: #FFFFFF40;
+}
+
+.subscribe ul {
+    margin-top: 2rem;
+}
+.subscribe ul li{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.footer-logo{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+
+.subscribe label {
+    text-transform: uppercase;
+}
+
+.subs {
+    margin-top: 1rem;
+    width: 80%;
+    padding: 1.5rem 1.5rem;
+    background-color: #FFFFFF33;
+    border-radius: var(--border-35px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subs input{
+    background-color: transparent;
+    padding: 0.8rem;
+    border: none;
+    width: 85%;
+    color: white;
+}
+
+
+.subs input::placeholder{
+    color: var(--white);
+}
+
+.subs button {
+    background-color: var(--white);
+    border-radius: 50%;
+    color: #172655;
+    border: none;
+}
+
+.subs svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: .8rem;
+    float: right;
+    border-radius: 50%;
+    width: 100%;
+}
+.subs button:hover {
+    background-color: var(--main-color);
+}
+
+.subs button:hover svg path{
+    fill: white;
+}
+
+.footer-paideia{
+    width: 50%;
+}
+
 
 /* ESTILS DE PAGINES ESPECIFICS */
 
@@ -750,6 +839,10 @@ a.button {
         padding-right: 1.5rem;
         padding-left: 1.5rem;
 
+    }
+
+    .footer-logo{
+        flex-direction: column;
     }
 
     .banner {
