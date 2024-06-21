@@ -565,6 +565,10 @@ a.button {
 
 }
 
+.desc .btn {
+    margin: 3rem auto;
+}
+
 
 .learn {
     background-image: url(../img/learn-path.jpg);
@@ -805,7 +809,7 @@ article .desc {
 }
 
 
-.steps ul,
+.steps li,
 .steps a {
     color: var(--main-color);
 }
@@ -848,10 +852,12 @@ ol li .title-step::before {
 }
 
 
+.steps a,
 .steps-sections a {
     color: var(--main-color);
 }
 
+.steps a:hover,
 .steps-sections a:hover {
     color: var(--dark-color);
     text-decoration: underline;
