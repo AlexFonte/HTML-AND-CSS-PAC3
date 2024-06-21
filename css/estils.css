@@ -16,6 +16,8 @@
     --border-10px: 1rem;
     --border-21px: 2.1rem;
     --border-35px: 3.5rem;
+    --box-sadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    --zoom-in: scale(1.1);
 }
 
 .satisfy-regular {
@@ -428,6 +430,9 @@ input:focus-visible {
     text-align: left;
     position: relative;
     object-fit: contain;
+    overflow: hidden;
+    border-top-left-radius: var(--border-10px);
+    border-top-right-radius: var(--border-10px);
 }
 
 .course figure h3 {
@@ -450,8 +455,6 @@ input:focus-visible {
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-top-left-radius: var(--border-10px);
-    border-top-right-radius: var(--border-10px);
     aspect-ratio: 600/400;
 }
 
@@ -506,7 +509,7 @@ input:focus-visible {
     padding: .5rem 1rem;
     margin: 1rem;
     position: absolute;
-
+    z-index: 1;
 }
 
 .course figure .target-new {
@@ -523,7 +526,18 @@ input:focus-visible {
 .course:hover {
     border-radius: var(--border-10px);
     border: 1px solid var(--text-color);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-sadow);
+}
+
+.course:hover img.fluid {
+    /* width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-top-left-radius: var(--border-10px);
+    border-top-right-radius: var(--border-10px);
+    aspect-ratio: 600/400; */
+    transform: var(--zoom-in);
+    transition: transform 0.3s ease-in-out;
 }
 
 .course-all {
@@ -674,9 +688,8 @@ a.button {
 }
 
 .bg-student img {
-
     border-radius: var(--border-10px);
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .top-categories {
@@ -734,6 +747,11 @@ a.button {
     height: auto;
     object-fit: contain;
     aspect-ratio: 520 / 375;
+    box-shadow: var(--box-sadow);
+}
+
+.img-instructor {
+    width: 90%;
 }
 
 .grid-instructor img {
@@ -745,15 +763,6 @@ a.button {
     max-width: 100%;
     margin: 5rem auto;
 }
-
-
-
-.img-instructor {
-    /* margin: 3rem 0 5rem 0; */
-    width: 100%;
-    box-shadow: 10px 10px 8px #33333333;
-}
-
 
 .instructor .btn {
     margin-top: 3rem;
@@ -834,15 +843,18 @@ article .desc {
     gap: 3rem;
 }
 
+.career-path ol,
 .steps-sections ol {
     list-style-type: none;
     counter-reset: item;
 }
 
+ol .path,
 ol .step {
     counter-increment: item;
 }
 
+ol .path .title-path::before,
 ol .step .title-step::before {
     content: counter(item) '';
     border: 1px solid var(--text-color);
@@ -879,7 +891,7 @@ ol .step .title-step::before {
     grid-template-rows: 2fr;
 }
 
-.step1-type2 ul{
+.step1-type2 ul {
     counter-reset: none;
     column-count: 1;
     column-gap: 20%;
@@ -887,16 +899,16 @@ ol .step .title-step::before {
     margin-left: 2rem;
 }
 
-.step1-type1 div{
+.step1-type1 div {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
-} 
+}
 
 
-.step1-type1 .icon::before{
+.step1-type1 .icon::before {
     background-image: url(../img/icon-academic.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -908,6 +920,30 @@ ol .step .title-step::before {
     vertical-align: middle;
 }
 
+.career-path {
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* .career-path h2{
+    width: 100%;
+    color: var(--text-color);
+    font-weight: 700;
+    background-color: var(--bg-light-blue);
+    border-bottom: 2px solid var(--text-color);
+}
+
+.career-path h2, .career-path ol{
+    padding: 0 2rem;
+}
+
+.career-path h2{
+    margin: 0; */
+
+}
 
 
 /* Estilos responsivos */
@@ -1031,8 +1067,12 @@ ol .step .title-step::before {
         padding: 5rem 0 3rem 11rem;
     }
 
-    .step1-type2 ul{
+    .step1-type2 ul {
         column-gap: 100%;
+    }
+
+    .img-instructor {
+        width: 90%;
     }
 }
 
@@ -1172,11 +1212,15 @@ ol .step .title-step::before {
         grid-template-columns: 1fr 1fr;
     }
 
-    .step1-type2 ul{
+    .step1-type2 ul {
         column-count: 3;
         column-gap: 15%;
     }
-    
+
+    .img-instructor {
+        width: 75%;
+    }
+
 }
 
 /* Estilos para tabletas*/
@@ -1309,9 +1353,13 @@ ol .step .title-step::before {
         grid-template-columns: 1fr 1fr;
     }
 
-    .step1-type2 ul{
+    .step1-type2 ul {
         column-count: 3;
         column-gap: 15%;
+    }
+
+    .img-instructor {
+        width: 70%;
     }
 }
 
@@ -1478,7 +1526,24 @@ ol .step .title-step::before {
         align-items: flex-start;
     }
 
-    .step1-type2 ul{
+    .img-instructor {
+        width: 50%;
+    }
+
+    .step1-type2 ul {
         column-count: 3;
     }
+
+    .hight-flex {
+        gap: 3rem;
+    }
+
+
+    .panel-left {
+        width: 75%;
+    }
+    .panel-right {
+        width: 25%;
+    }
+
 }
