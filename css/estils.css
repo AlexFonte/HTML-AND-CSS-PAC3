@@ -363,7 +363,8 @@ input:focus-visible {
     width: 100%;
 }
 
-.subs button:hover {
+.subs button:hover,
+.sec4 button:hover {
     background-color: var(--main-color);
 }
 
@@ -862,18 +863,22 @@ ol .step .title-step::before {
     font-size: 20px;
 }
 
-
+.sec4 a,
 .steps a,
 .steps-sections a {
     color: var(--main-color);
 }
 
+.sec4 a:hover,
 .steps a:hover,
 .steps-sections a[href^="http"]:hover {
-    color: var(--dark-color);
     text-decoration: underline;
 }
 
+.steps a:hover,
+.steps-sections a[href^="http"]:hover {
+    color: var(--dark-color);
+}
 
 .step1-type1,
 .step1-type2 {
@@ -1040,7 +1045,6 @@ form .sec1 {
     margin: 1rem 0;
 }
 
-
 form .inputs {
     display: flex;
     flex-direction: column;
@@ -1048,23 +1052,71 @@ form .inputs {
     gap: 1rem;
 }
 
-form .inputs li:first-child {
+form .inputs li:first-child,
+.sec3,
+.sec4 {
     margin-top: 1rem;
 }
+
+.sec3 h3{
+    padding-bottom: 0.5rem;
+}
+
 
 form li {
     width: 100%;
 }
 
-form li label {
+.inputs li label {
     display: block;
 }
 
-
-form input {
+.sec1 input,
+.sec3 select {
     width: 100%;
-    padding: .75rem 0;;
+    padding: .5rem 0;
+    font-size: 1.5rem;
 }
+
+.sec3 select {
+    height: 100%;
+    padding-left: 0.25rem;
+}
+
+.checkbox {
+    margin-top: 1rem;
+}
+
+.checkbox li,
+.sec4 li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.sec4 li{
+    align-items: baseline;
+}
+
+.sec4 button{
+    width: 100%;
+    background-color: var(--text-color);
+    color: var(--white);
+    border: none;
+    margin-top: 1rem;
+    padding: 2rem 1rem;
+    border-radius: var(--border-10px);
+    font-size: 1.5rem;
+}
+
+/* .checkbox li label,
+.sec4 li label {
+    display: inline;
+} */
+
+
 
 
 /* Estilos responsivos */

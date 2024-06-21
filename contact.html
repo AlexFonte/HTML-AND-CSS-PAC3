@@ -84,7 +84,7 @@
         <div class="contact-header">
             <h1>Contact us</h1>
             <p>We’re on a mission to deliver engaging, curated courses at a reasonable price.</p>
-            </div>
+        </div>
         </div>
 
         <div class="hight-flex">
@@ -96,26 +96,73 @@
                 <form action="#" method="post" class="contact-form">
                     <h2>We call you</h2>
                     <p>Do you have any doubt? Drop us an e-mail. We will contact you soon</p>
+
                     <div>
-                        
-                    <section class="sec1">
-                        <h3>Who are you?</h3>
-                        <ul class="inputs">
-                            <li class="">
-                                <label for="name" class="montserrat-semibold">Name</label>
-                                <input type="text" id="name" name="name" required
-                                    pattern="[\p{L} '\-]{3,255}" title="Només caràcters alfabètics. Un mínim de 3 i un màxim de 255 caràcters">
-                            </li>
-                            <li class="">
-                                <label for="email" class="montserrat-semibold">E-mail</label>
-                                <input type="email" id="email" name="email" required>
-                            </li>
-                            <li class="">
-                                <label for="phone" class="montserrat-semibold">Phone number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </li>
-                        </ul>
-                    </section>
+
+                        <section class="sec1">
+                            <h3>Who are you?</h3>
+                            <ul class="inputs">
+                                <li class="">
+                                    <label for="name" class="montserrat-semibold">Name</label>
+                                    <input type="text" id="name" name="name" required pattern="[\p{L} '\-]{3,255}"
+                                        title="Només caràcters alfabètics. Un mínim de 3 i un màxim de 255 caràcters">
+                                </li>
+                                <li class="">
+                                    <label for="email" class="montserrat-semibold">E-mail</label>
+                                    <input type="email" id="email" name="email" required>
+                                </li>
+                                <li class="">
+                                    <label for="phone" class="montserrat-semibold">Phone number</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="sec2">
+                            <h3>What are you interested in?</h3>
+                            <ul class="checkbox">
+                                <li class="">
+                                    <input type="checkbox" id="person" name="preson" value="" class="">
+                                    <label for="person">In-person courses</label>
+                                </li>
+                                <li class="">
+                                    <input type="checkbox" id="online" name="online" value="" class="">
+                                    <label for="online">Online courses</label>
+                                </li>
+                                <li class="">
+                                    <input type="checkbox" id="hybrid" name="hybrid" value="" class="">
+                                    <label for="hybrid">Hybrid courses</label>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="sec3">
+                            <h3><label for="area">In what area?</label></h3>
+                            <ul class="">
+                                <li>
+                                    <select id="area" name="area" multiple required size="9">
+                                        <option>History</option>
+                                        <option>Art</option>
+                                        <option>Music</option>
+                                        <option>Gardening</option>
+                                        <option>Decoration</option>
+                                        <option>DIY</option>
+                                        <option>Technology</option>
+                                        <option>Psychology</option>
+                                        <option>Languages</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </section>
+                        <div class="sec4">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="politica" id="politica" value="Sí" required >
+                                    <label for="politica">I have read and accept the <a href="#">legal conditions</a></label>
+                                </li>
+                            </ul>
+                            <button type="submit">Call me</button>
+                        </div>
                     </div>
                 </form>
             </div>
