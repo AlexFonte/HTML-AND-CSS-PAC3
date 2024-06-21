@@ -800,7 +800,7 @@ article .desc {
 .steps {
     border: 2px solid var(--main-color);
     padding: 2rem 0 2rem 3.5rem;
-    margin: 2rem 0 3rem 0;
+    margin: 3rem 0 5rem 0;
 }
 
 .steps ul {
@@ -839,11 +839,11 @@ article .desc {
     counter-reset: item;
 }
 
-ol li {
+ol .step {
     counter-increment: item;
 }
 
-ol li .title-step::before {
+ol .step .title-step::before {
     content: counter(item) '';
     border: 1px solid var(--text-color);
     padding: 1rem 1.5rem;
@@ -862,6 +862,52 @@ ol li .title-step::before {
     color: var(--dark-color);
     text-decoration: underline;
 }
+
+
+.step1-type1,
+.step1-type2 {
+    border: 2px solid var(--bg-light-blue);
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+}
+
+.step1-type1,
+.step1-type2 {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+}
+
+.step1-type2 ul{
+    counter-reset: none;
+    column-count: 1;
+    column-gap: 20%;
+    list-style-type: circle;
+    margin-left: 2rem;
+}
+
+.step1-type1 div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+} 
+
+
+.step1-type1 .icon::before{
+    background-image: url(../img/icon-academic.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    content: ' ';
+    vertical-align: middle;
+}
+
 
 
 /* Estilos responsivos */
@@ -983,6 +1029,10 @@ ol li .title-step::before {
 
     .btn-solutions {
         padding: 5rem 0 3rem 11rem;
+    }
+
+    .step1-type2 ul{
+        column-gap: 100%;
     }
 }
 
@@ -1121,6 +1171,12 @@ ol li .title-step::before {
     .grid-instructor {
         grid-template-columns: 1fr 1fr;
     }
+
+    .step1-type2 ul{
+        column-count: 3;
+        column-gap: 15%;
+    }
+    
 }
 
 /* Estilos para tabletas*/
@@ -1251,6 +1307,11 @@ ol li .title-step::before {
 
     .grid-cat {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .step1-type2 ul{
+        column-count: 3;
+        column-gap: 15%;
     }
 }
 
@@ -1415,5 +1476,9 @@ ol li .title-step::before {
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: flex-start;
+    }
+
+    .step1-type2 ul{
+        column-count: 3;
     }
 }
