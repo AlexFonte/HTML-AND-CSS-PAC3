@@ -825,7 +825,7 @@ article .desc {
 .title-step {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-items: start;
     gap: 1rem;
     font-size: 1.8rem;
@@ -855,7 +855,7 @@ ol .step {
 ol .step .title-step::before {
     content: counter(section) '';
     border: 1px solid var(--text-color);
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1rem;
     font-weight: 700;
     font-size: 20px;
 }
