@@ -1601,10 +1601,6 @@ ol .step .title-step::before {
         width: 50%;
     }
 
-    .step1-type2 ul {
-        column-count: 3;
-    }
-
     .panel-left {
         width: 75%;
     }
@@ -1612,5 +1608,10 @@ ol .step .title-step::before {
     .panel-right {
         width: 25%;
     }
+    
+    .step1-type2 ul {
+        column-count: 3;
+    }
+
 
 }
