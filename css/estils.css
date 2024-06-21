@@ -785,13 +785,15 @@ a.button {
     color: var(--text-color);
 }
 
-.hight-flex h1 {
+.hight-flex h1,
+.contact-header h1 {
     font-size: 3.5rem;
     color: var(--main-color);
 }
 
 .introduction p,
-article h2 {
+article h2,
+.contact-header p {
     font-size: 2rem;
 }
 
@@ -951,7 +953,7 @@ ol .step .title-step::before {
     font-size: 1.8rem;
 }
 
-.career-path h2{
+.career-path h2 {
     padding: 0 1rem;
 }
 
@@ -999,7 +1001,7 @@ ol .step .title-step::before {
     padding-right: 0.25rem;
 }
 
-.chevron{
+.chevron {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1009,13 +1011,59 @@ ol .step .title-step::before {
 }
 
 .chevron .bottom::before {
-	content: '';
-	display: inline-block;
-	border-style: solid;
-	border-width: 0.4rem 0.4rem 0 0;
-	width: 3rem;
-	height: 3rem;
-	transform: rotate(135deg);
+    content: '';
+    display: inline-block;
+    border-style: solid;
+    border-width: 0.4rem 0.4rem 0 0;
+    width: 3rem;
+    height: 3rem;
+    transform: rotate(135deg);
+}
+
+.contact-form {
+    background-color: var(--bg-light-yellow);
+    border-radius: var(--border-21px);
+    border: 2px solid var(--border-color);
+    padding: 2rem;
+}
+
+.contact-form h2,
+.contact-form h3 {
+    color: var(--dark-color);
+}
+
+.contact-form h2+p {
+    margin-top: 1rem;
+}
+
+form .sec1 {
+    margin: 1rem 0;
+}
+
+
+form .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+form .inputs li:first-child {
+    margin-top: 1rem;
+}
+
+form li {
+    width: 100%;
+}
+
+form li label {
+    display: block;
+}
+
+
+form input {
+    width: 100%;
+    padding: .75rem 0;;
 }
 
 
@@ -1608,7 +1656,7 @@ ol .step .title-step::before {
     .panel-right {
         width: 25%;
     }
-    
+
     .step1-type2 ul {
         column-count: 3;
     }
