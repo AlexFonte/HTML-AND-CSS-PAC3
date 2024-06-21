@@ -845,15 +845,15 @@ article .desc {
 
 .steps-sections ol {
     list-style-type: none;
-    counter-reset: item;
+    counter-reset: section;
 }
 
 ol .step {
-    counter-increment: item;
+    counter-increment: section;
 }
 
 ol .step .title-step::before {
-    content: counter(item) '';
+    content: counter(section) '';
     border: 1px solid var(--text-color);
     padding: 1rem 1.5rem;
     font-weight: 700;
@@ -962,9 +962,12 @@ ol .step .title-step::before {
 
 .paths {
     list-style-type: none;
-    counter-reset: item;
+    counter-reset: section;
     padding: 0 1rem 2rem 1rem;
-
+    display: grid;
+    grid-template-rows: 9fr;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 .path {
@@ -972,7 +975,7 @@ ol .step .title-step::before {
     grid-template-rows: 3fr;
     grid-template-columns: 1fr;
     gap: 1rem;
-    counter-increment: item;
+    counter-increment: section;
 }
 
 .title-path {
@@ -980,7 +983,7 @@ ol .step .title-step::before {
 }
 
 .title-path h3::before {
-    content: counter(item) '. ';
+    content: counter(section) '. ';
     font-weight: 700;
 }
 
@@ -995,6 +998,26 @@ ol .step .title-step::before {
 .panel-left {
     padding-right: 0.25rem;
 }
+
+.chevron{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.chevron .bottom::before {
+	content: '';
+	display: inline-block;
+	border-style: solid;
+	border-width: 0.4rem 0.4rem 0 0;
+	width: 3rem;
+	height: 3rem;
+	transform: rotate(135deg);
+}
+
+
 
 /* Estilos responsivos */
 /* Estilos para mobil */
