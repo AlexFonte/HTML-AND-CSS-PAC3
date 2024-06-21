@@ -867,7 +867,7 @@ ol .step .title-step::before {
 }
 
 .steps a:hover,
-.steps-sections a:hover {
+.steps-sections a[href^="http"]:hover {
     color: var(--dark-color);
     text-decoration: underline;
 }
@@ -1005,6 +1005,7 @@ ol .step .title-step::before {
     justify-content: center;
     align-content: center;
     align-items: center;
+    padding-bottom: 1rem;
 }
 
 .chevron .bottom::before {
@@ -1016,7 +1017,6 @@ ol .step .title-step::before {
 	height: 3rem;
 	transform: rotate(135deg);
 }
-
 
 
 /* Estilos responsivos */
@@ -1144,13 +1144,6 @@ ol .step .title-step::before {
         column-gap: 100%;
     }
 
-    .img-instructor {
-        width: 90%;
-    }
-
-    .panel-right {
-        width: 60%;
-    }
 }
 
 /* Estilos para tabletas */
@@ -1249,10 +1242,6 @@ ol .step .title-step::before {
 
     .search input {
         width: 70%;
-    }
-
-    .footer-logo {
-        flex-direction: column;
     }
 
     .subs {
@@ -1398,10 +1387,6 @@ ol .step .title-step::before {
         width: 70%;
     }
 
-    .footer-logo {
-        flex-direction: row;
-    }
-
     .subs {
         margin-top: 1.5rem;
         width: 42.5rem;
@@ -1437,7 +1422,7 @@ ol .step .title-step::before {
     }
 
     .img-instructor {
-        width: 70%;
+        width: 60%;
     }
 }
 
