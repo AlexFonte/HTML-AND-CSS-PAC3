@@ -541,7 +541,8 @@ a.button {
 
 .course-all a,
 .btn-solutions a,
-.grid-instructor a {
+.grid-instructor a,
+.btn .button {
     color: var(--main-color);
     background-color: var(--white);
     border: 1px solid var(--main-color);
@@ -550,7 +551,8 @@ a.button {
 .course-all a:hover,
 .btn-solutions a:hover,
 .grid-instructor a:hover,
-.grid-cat a:hover {
+.grid-cat a:hover,
+.btn .button:hover {
     color: var(--white);
     background-color: var(--main-color);
     cursor: pointer;
@@ -736,14 +738,14 @@ a.button {
 
 .imgs {
     text-align: center;
-    max-width: 50%;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 5rem auto;
 }
 
 
 
 .img-instructor {
-    margin: 3rem 0 5rem 0;
+    /* margin: 3rem 0 5rem 0; */
     width: 100%;
     box-shadow: 10px 10px 8px #33333333;
 }
@@ -785,16 +787,16 @@ article h2 {
     margin-bottom: 3rem;
 }
 
-article p {
+article .desc {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    padding-left: 5.5rem;
 }
 
 
 .steps {
     border: 2px solid var(--main-color);
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 2rem 0 2rem 3.5rem;
+    margin: 2rem 0 3rem 0;
 }
 
 .steps ul {
@@ -803,45 +805,56 @@ article p {
 }
 
 
-
 .steps ul,
 .steps a {
     color: var(--main-color);
 }
 
-.steps-sections h3 {
+.title-step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: start;
+    gap: 1rem;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 1rem;
 }
 
-
-ol {
-    counter-reset: item;
-    list-style-type: none;
+.steps ul,
+.steps-sections ol {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 3rem;
 }
 
+.steps-sections ol {
+    list-style-type: none;
+    counter-reset: item;
+}
+
 ol li {
     counter-increment: item;
 }
 
-ol li h3::before {
-    content:counter(item) '';
+ol li .title-step::before {
+    content: counter(item) '';
     border: 1px solid var(--text-color);
-    padding: .75rem 1.25rem;
-    margin-right: 1rem;
+    padding: 1rem 1.5rem;
     font-weight: 700;
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 
-.wrapper{
-    margin: 0 0 0 4.5rem;
+.steps-sections a {
+    color: var(--main-color);
+}
+
+.steps-sections a:hover {
+    color: var(--dark-color);
+    text-decoration: underline;
 }
 
 
