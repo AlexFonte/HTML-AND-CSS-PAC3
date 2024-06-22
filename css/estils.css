@@ -44,16 +44,28 @@
     font-style: normal;
 }
 
-.text-20px {
-    font-size: 20px;
+.text-60px {
+    font-size: 6rem;
 }
 
 .text-55px {
-    font-size: 55px;
+    font-size: 5.5rem;
 }
 
-.text-60px {
-    font-size: 60px;
+.text-24px {
+    font-size: 2.4rem;
+}
+
+.text-20px {
+    font-size: 2rem;
+}
+
+.fs-18px{
+    font-size: 1.8rem;
+}
+
+.fs-16px{
+    font-size: 1.6rem;
 }
 
 .white {
@@ -737,6 +749,8 @@ a.button {
     padding: 3rem 0;
 }
 
+
+
 .grid-instructor {
     display: grid;
     grid-template-columns: 1fr;
@@ -803,6 +817,7 @@ article h2,
     font-size: 2rem;
 }
 
+.start-instructor h2,
 article h2 {
     color: var(--dark-color);
     margin-bottom: 3rem;
@@ -831,13 +846,14 @@ article h2 {
     color: var(--main-color);
 }
 
+
 .title-step {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-items: start;
     gap: 1rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 1rem;
@@ -991,14 +1007,13 @@ ol .step .title-step::before {
     counter-increment: section;
 }
 
-.title-path {
-    font-size: 1.6rem;
-}
-
 .title-path h3::before {
     content: counter(section) '. ';
     font-weight: 700;
+    font-size: 2rem;
 }
+
+
 
 .desc-path ul {
     display: grid;
@@ -1041,6 +1056,10 @@ ol .step .title-step::before {
 .contact-form h2,
 .contact-form h3 {
     color: var(--dark-color);
+}
+
+.contact-form h2{
+    margin-bottom: 2rem;
 }
 
 form .inputs li:first-child,
@@ -1214,15 +1233,16 @@ img.fluid-round {
     text-decoration-thickness: 3px;
 }
 
-.offices h3,
-.ambassador h3 {
-    font-size: 3rem;
+.contact-form h2,
+.offices h2,
+.ambassador h2 {
+    font-size: 2.4rem;
 }
 
 .contact-form h3,
 .offices h3,
 .ambassador h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 
