@@ -280,7 +280,7 @@ footer a:hover,
 .sec4 a:hover,
 .steps a:hover,
 .steps-sections a[href^="http"]:hover,
-.mailto:hover  {
+.mailto:hover {
     text-decoration: underline;
 }
 
@@ -788,6 +788,7 @@ a.button {
     text-align: left;
     gap: 3rem;
     color: var(--text-color);
+    margin: 3rem 0;
 }
 
 .hight-flex h1,
@@ -1085,6 +1086,10 @@ form li {
     padding-left: 0.25rem;
 }
 
+.sec4 {
+    margin-top: 2rem;
+}
+
 .checkbox li,
 .sec4 li {
     display: flex;
@@ -1103,7 +1108,7 @@ form li {
     background-color: var(--text-color);
     color: var(--white);
     border: none;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: var(--border-10px);
     font-size: 1.5rem;
 }
@@ -1112,33 +1117,45 @@ form li {
 .sec4 li label {
     display: inline;
 } */
-
-.ambassord ul,
-.offices ul {
+.contact-header>p,
+.ambassador,
+.offices {
     margin-top: 2rem;
+}
+
+.ambassador ul,
+.offices ul {
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
 }
-.ambassord ul{
+
+
+.ambassador ul {
     gap: 0.2rem;
 }
 
-.ambassord li {
+.ambassador li {
     text-align: center;
     background-color: var(--border-color);
 }
 
-.ambassord .desc {
-    width: 90%;
+.offices .desc,
+.ambassador .desc {
     margin: 1rem auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.ambassador-imgs{
+
+.ambassador .desc {
+    width: 90%;
+}
+
+.ambassador-imgs {
     width: 190px;
     margin: 0 auto;
     position: relative;
@@ -1155,7 +1172,7 @@ img.fluid-round {
 
 .fluid-round-flag {
     position: absolute;
-    bottom: 0;  
+    bottom: 0;
     right: 0;
     border-radius: 50%;
     border: 5px solid var(--white);
@@ -1166,32 +1183,48 @@ img.fluid-round {
     background-position: center;
 }
 
-.be{
+.be {
     background-image: url(../img/be.svg);
 }
-.ma{
+
+.ma {
     background-image: url(../img/ma.svg);
 }
-.bo{
+
+.bo {
     background-image: url(../img/bo.svg);
 }
-.ca{
+
+.ca {
     background-image: url(../img/ca.svg);
 }
 
-.mailto{
+.mailto {
     color: var(--main-color);
 }
 
-.translate{
+.translate {
     color: var(--dark-color);
     text-decoration: underline;
+    font-size: 1.4rem;
 }
 
-.translate:hover{
-    font-weight: 700; 
+.translate:hover {
+    font-weight: 700;
     text-decoration-thickness: 3px;
 }
+
+.offices h3,
+.ambassador h3 {
+    font-size: 3rem;
+}
+
+.contact-form h3,
+.offices h3,
+.ambassador h3 {
+    font-size: 2rem;
+}
+
 
 /* Estilos responsivos */
 /* Estilos para mobil */
@@ -1322,7 +1355,7 @@ img.fluid-round {
         width: 100%;
     }
 
-    .ambassord ul,
+    .ambassador ul,
     .offices ul {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -1808,9 +1841,15 @@ img.fluid-round {
     }
 
 
+    .offices ul {
+        row-gap: 5rem;
+    }
+
     .offices ul li:last-child {
         grid-row: 2;
         grid-column: 1 /span 2;
     }
+
+
 
 }
