@@ -355,7 +355,7 @@ input:focus-visible {
     outline: none;
 }
 
-.subs svg {
+.subs img {
     height: 4rem;
     padding: .8rem;
     float: right;
@@ -368,8 +368,8 @@ input:focus-visible {
     background-color: var(--main-color);
 }
 
-.subs button:hover svg path {
-    fill: white;
+.subs button:hover img{
+    filter: invert(95%) sepia(99%) saturate(3%) hue-rotate(218deg) brightness(105%) contrast(100%);
 }
 
 .footer-paideia {
@@ -1058,7 +1058,7 @@ form .inputs li:first-child,
     margin-top: 1rem;
 }
 
-.sec3 h3{
+.sec3 h3 {
     padding-bottom: 0.5rem;
 }
 
@@ -1096,11 +1096,11 @@ form li {
     gap: 1rem;
 }
 
-.sec4 li{
+.sec4 li {
     align-items: baseline;
 }
 
-.sec4 button{
+.sec4 button {
     width: 100%;
     background-color: var(--text-color);
     color: var(--white);
@@ -1117,6 +1117,12 @@ form li {
 } */
 
 
+.offices ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+}
 
 
 /* Estilos responsivos */
@@ -1713,5 +1719,13 @@ form li {
         column-count: 3;
     }
 
+    .offices ul {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
 
+    .offices ul li:last-child {
+        grid-row: 2;
+        grid-column: 1 /span 2;
+    }
 }
