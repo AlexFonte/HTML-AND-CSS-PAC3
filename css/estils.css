@@ -126,7 +126,7 @@ main h2 {
     color: var(--main-color);
 }
 
-/* CONTENIDOR PRINCIPAL I MENU */
+/* CONTENIDOR PRINCIPAL I MENU  + FOOTER*/
 a {
     text-decoration: none;
 }
@@ -394,7 +394,6 @@ input:focus-visible {
 
 
 /* ESTILS DE PAGINES ESPECIFICS */
-
 .subtitle {
     font-size: 3rem;
     margin-bottom: 2rem;
@@ -563,7 +562,6 @@ input:focus-visible {
     margin: 5rem 0 10rem 0;
 }
 
-
 a.button {
     border-radius: var(--border-10px);
     padding: 1.5rem 1rem;
@@ -599,7 +597,6 @@ a.button {
 .btn {
     margin: 3rem auto;
 }
-
 
 .learn {
     background-image: url(../img/learn-path.jpg);
@@ -850,7 +847,7 @@ article h2 {
 .title-step {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-items: start;
     gap: 1rem;
     font-size: 2rem;
@@ -1569,21 +1566,16 @@ img.fluid-round {
 
     /* Transformaciones cuando el menú hamburguesa está activo (checkbox checked) */
     #hamburger-toggle:checked+nav .slice:nth-child(1) {
-        transform: rotate(45deg) translate(10px, 10px);
-        /*Gira y mueve el primer 'slice' */
+        transform: rotate(45deg) translate(10px, 10px);/*Gira y mueve el primer 'slice' */
     }
 
     #hamburger-toggle:checked+nav .slice:nth-child(2) {
-        opacity: 0;
-        /* Oculta el segundo 'slice' */
-
+        opacity: 0; /* Oculta el segundo 'slice' */
     }
 
     #hamburger-toggle:checked+nav .slice:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -7px);
-        /*Gira y mueve el tercer 'slice' */
+        transform: rotate(-45deg) translate(6px, -7px); /*Gira y mueve el tercer 'slice' */
     }
-
 
     nav li {
         width: 100%;
@@ -1673,12 +1665,10 @@ img.fluid-round {
         width: 60%;
     }
 
-
     .offices ul li:last-child {
         grid-row: 2;
         grid-column: 1 /span 2;
     }
-
 }
 
 /* Estilos para ordenadores */
@@ -1856,10 +1846,13 @@ img.fluid-round {
         width: 25%;
     }
 
+    .title-step{
+        align-items: center;
+    }
+
     .step1-type2 ul {
         column-count: 3;
     }
-
 
     .offices ul {
         row-gap: 5rem;
@@ -1869,7 +1862,5 @@ img.fluid-round {
         grid-row: 2;
         grid-column: 1 /span 2;
     }
-
-
 
 }
