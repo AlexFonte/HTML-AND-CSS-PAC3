@@ -412,7 +412,7 @@ input:focus-visible {
     grid-template-columns: repeat(1, 1fr);
 }
 
-.    {
+.grid-courses {
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(1, 1fr);
@@ -696,6 +696,7 @@ a.button {
 
     box-shadow: inset 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
     background-color: var(--border-color);
+    /* linear-gradient(to bottom,  var(--border-color), var(--bg-light-blue)); */
     padding: 5rem 0;
 }
 
