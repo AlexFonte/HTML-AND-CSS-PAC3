@@ -393,7 +393,11 @@ input:focus-visible {
 }
 
 
-/* ESTILS DE PAGINES ESPECIFICS */
+/** 
+    ESTILS DE PAGINES ESPECIFICS  I GENERALS
+    AQUEST FTIXER SEGEUIX EL ORDRE SEGUENT: index.html, become-an-instructor.html i contact.html
+    Pot haveri una barreja de cuan es tracta de regles en comu.
+*/
 .subtitle {
     font-size: 3rem;
     margin-bottom: 2rem;
@@ -440,7 +444,6 @@ input:focus-visible {
     justify-self: center;
     color: white;
 }
-
 
 .course figure {
     text-align: left;
@@ -492,31 +495,23 @@ input:focus-visible {
     vertical-align: text-bottom;
 }
 
-.lessons {
+.icon-fig{
     display: inline-flex;
     align-items: center;
     background-size: 17px;
-    background-image: url(../img/lessons.svg);
     background-repeat: no-repeat;
     padding-left: 2rem;
+}
+.lessons {
+    background-image: url(../img/lessons.svg);
 }
 
 .timing {
-    display: inline-flex;
-    align-items: center;
-    background-size: 17px;
     background-image: url(../img/duration.svg);
-    background-repeat: no-repeat;
-    padding-left: 2rem;
 }
 
 .level {
-    display: inline-flex;
-    align-items: center;
-    background-size: 17px;
     background-image: url(../img/level.svg);
-    background-repeat: no-repeat;
-    padding-left: 2rem;
 }
 
 .course figure .target-best-seller,
@@ -546,12 +541,6 @@ input:focus-visible {
 }
 
 .course:hover img.fluid {
-    /* width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-top-left-radius: var(--border-10px);
-    border-top-right-radius: var(--border-10px);
-    aspect-ratio: 600/400; */
     transform: var(--zoom-in);
     transition: transform 0.3s ease-in-out;
 }
@@ -680,7 +669,6 @@ a.button {
     gap: 3rem;
 }
 
-
 .leadership .round {
     background-color: var(--bg-light-green);
 }
@@ -746,8 +734,6 @@ a.button {
     padding: 3rem 0;
 }
 
-
-
 .grid-instructor {
     display: grid;
     grid-template-columns: 1fr;
@@ -787,7 +773,6 @@ a.button {
 .instructor {
     box-shadow: inset 0px 3px 10px 0px white;
 }
-
 
 .hight-flex {
     display: flex;
@@ -836,13 +821,11 @@ article h2 {
     padding-left: 1rem;
 }
 
-
 .steps li,
 .steps a,
 .mailto {
     color: var(--main-color);
 }
-
 
 .title-step {
     display: flex;
@@ -863,7 +846,6 @@ article h2 {
     grid-template-rows: auto;
     gap: 3rem;
 }
-
 
 .steps-sections ol {
     list-style-type: none;
@@ -1129,10 +1111,6 @@ form li {
     font-size: 1.5rem;
 }
 
-/* .checkbox li label,
-.sec4 li label {
-    display: inline;
-} */
 .contact-header>p,
 .ambassador,
 .offices {
@@ -1242,8 +1220,7 @@ img.fluid-round {
     font-size: 1.8rem;
 }
 
-
-/* Estilos responsivos */
+/* ESTILS RESPONSIVE */
 /* Estilos para mobil */
 @media (max-width: 600px) {
     .container {
@@ -1278,13 +1255,11 @@ img.fluid-round {
 
     /* Transformaciones cuando el menú hamburguesa está activo (checkbox checked) */
     #hamburger-toggle:checked+nav .slice:nth-child(1) {
-        transform: rotate(45deg) translate(10px, 10px);
-        /*Gira y mueve el primer 'slice' */
+        transform: rotate(45deg) translate(10px, 10px);/*Gira y mueve el primer 'slice' */
     }
 
     #hamburger-toggle:checked+nav .slice:nth-child(2) {
-        opacity: 0;
-        /* Oculta el segundo 'slice' */
+        opacity: 0; /* Oculta el segundo 'slice' */
 
     }
 
